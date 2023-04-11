@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as date
 from matplotlib.colors import LogNorm
 
-#%% More basic atmospheric functions
+#%% Basic atmospheric functions
 def ppbconversion(ppb,T,P): #temperature in kelvin and pressure in Pascal
     volmol=8.3144*T/P*10**(6) #volume of 1 mol in cc
     molecules=ppb/10**(9)*6.022*10**(23)/volmol
@@ -126,7 +126,7 @@ def waterpressure(RH,T,P):
 
 def Tdewpoint(RH,T,P):
     ''' This function calculates dewpoint temperature. It is based on 
-    Vaisala suggestion and should hold between -20 and 50 C.
+    Vaisala suggestion and should be valid between -20 and 50 C.
     Input:
         RH in %
         T in Kelvin
